@@ -17,16 +17,19 @@
 3.[生產優化](#生產優化)\
 4.[瀏覽器相容性](#瀏覽器相容性)
 
-基礎\
+核心觀念\
 0.[開始](#開始)\
 1.[常用狀態](#常用狀態)\
 &nbsp; &nbsp; &nbsp; [偽類](#偽類)\
 &nbsp; &nbsp; &nbsp; [偽元素](#偽元素)\
-&nbsp; &nbsp; &nbsp; [媒體查詢](#媒體查詢)
+&nbsp; &nbsp; &nbsp; [媒體查詢](#媒體查詢)\
+&nbsp; &nbsp; &nbsp; [主題](#主題)
 
 
 2.[響應設計](#響應設計)\
-3.[深色模式](#深色模式)
+3.[夜間模式](#夜間模式)\
+4.[主題樣式](#主題樣式)\
+5.[自訂義主題](#自訂義主題)
 
 
 ## 入門
@@ -65,7 +68,7 @@ VSCode 建議安裝官方插件 Tailwind CSS IntelliSense
 ## 瀏覽器相容性
 相容性查詢 https://caniuse.com/?search=focus-visible
 
-## 基礎
+## 核心觀念
 ## 開始
 ```js
 <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -98,7 +101,7 @@ VSCode 建議安裝官方插件 Tailwind CSS IntelliSense
   Save changes
 </button>
 ```
-↑可以堆疊，在暗模式、中等斷點處、懸停時更改背景顏色
+↑可以堆疊，在夜間模式、中等斷點處、懸停時更改背景顏色
 ```js
 <button class="bg-violet-500 hover:bg-violet-400 active:bg-violet-600 focus:outline-none focus:ring focus:ring-violet-300 ...">
   Save changes
@@ -271,4 +274,233 @@ VSCode 建議安裝官方插件 Tailwind CSS IntelliSense
   </p>
 </div>
 ```
-↑ 深色模式。更多請參考：3.[深色模式](##深色模式)
+↑ 夜間模式。請參考：3.[夜間模式](##夜間模式)
+```js
+<div>
+  <div class="portrait:hidden">
+    111
+  </div>
+  <div class="landscape:hidden">
+    <p>
+      This experience is designed to be viewed in landscape. Please rotate your
+      device to view the site.
+    </p>
+  </div>
+</div>
+```
+↑ 視口方向，portrait:hidden 垂直時隱藏，landscape:hidden橫向時隱藏
+```js
+<div>
+  <article class="print:hidden">
+    <h1>My Secret Pizza Recipe</h1>
+    <p>This recipe is a secret, and must not be shared with anyone</p>
+  </article>
+  <div class="hidden print:block">
+    Are you seriously trying to print this? It's secret!
+  </div>
+</div>
+```
+↑ 列印，print:hidden 列印時隱藏，print:block 列印時顯示
+## 主題
+```js
+//index.js
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .content-auto {
+        content-visibility: auto;
+    }
+}
+
+
+//目標組件
+function App() {
+	return (
+		<div className="App">
+			<div class="content-auto">...</div>
+		</div>
+	);
+}
+```
+↑  @layer utilities{...} 定義全局樣式\
+相關類似請參考，4.[主題樣式](#主題樣式)
+
+
+
+## 響應設計
+分辨率\
+sm	640px	@media (min-width: 640px) { ... }\
+md	768px	@media (min-width: 768px) { ... }\
+lg	1024px	@media (min-width: 1024px) { ... }\
+xl	1280px	@media (min-width: 1280px) { ... }\
+2xl	1536px	@media (min-width: 1536px) { ... }
+
+```js
+<div className=' sm:bg-green-500 sm:font-bold'>111</div>
+//注意：默认情况下，Tailwind 使用移动优先的断点系统
+```
+↑基本使用，分辨率640px以上屏幕，背景綠色，字重700
+
+```js
+//tailwind.config.js
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    screens: {
+      'sm': {'min': '640px', 'max': '767px'},
+      'md': {'min': '768px', 'max': '1023px'},
+      'lg': {'min': '1024px', 'max': '1279px'},
+      'xl': {'min': '1280px', 'max': '1535px'},
+      '2xl': {'min': '1536px'},
+    },
+    extend: {},
+  },
+  plugins: [],
+}
+//現在 sm 只作用在 640px~767px 區間
+```
+↑ 設置範圍為固定區間
+```js
+//tailwind.config.js
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    screens: {
+      '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
+
+      'xl': {'max': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
+      'lg': {'max': '1023px'},
+      // => @media (max-width: 1023px) { ... }
+
+      'md': {'max': '767px'},
+      // => @media (max-width: 767px) { ... }
+
+      'sm': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+    },
+    extend: {},
+  },
+  plugins: [],
+}
+
+//my components
+<div className=' sm:bg-green-500 sm:font-bold'>111</div>
+```
+↑ 與默認相反的設置，640px以下屏幕，背景綠色，字重700\
+更多請參考：https://tailwindcss.com/docs/screens
+
+## 夜間模式
+```js
+//tailwind.config.js
+module.exports = {
+  darkMode: 'class',
+}
+//添加 darkMode ，設置以 class 來開關夜間模式
+
+//組件頂層
+function App() {
+	return ( 
+		<div className="App dark">
+			<div class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+				<div>
+					<span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
+						<svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">123</svg>
+					</span>
+				</div>
+				<h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes Upside-Down</h3>
+				<p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+					The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+				</p>
+			</div>
+		</div>
+	);
+}
+```
+↑ 以 class 來控制夜間模式的開啟與關閉
+
+## 主題樣式
+```js
+//index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.myComponents{ @apply
+		bg-green-500
+	}
+}
+//注意 @apply 不可缺少
+
+//目標組件
+function App() {
+	return ( 
+		<div className="App ">
+			<div className='myComponents'>111</div>
+		</div>
+	);
+}
+```
+↑ 用來定義主題樣式，使用場景如 primaryButton、secondButton、table 等等
+
+## 自訂義主題
+```js
+//tailwind.config.js
+module.exports = {
+  theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    colors: {
+      'blue': '#1fb6ff',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
+    },
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      }
+    }
+  }
+}
+```
+↑ 由 tailwind.config.js 中 theme 控制自訂義主題
+```js
+<div class="bg-[#bada55] text-[22px] before:content-['Festivus']">
+  111
+</div>
+```
+↑ 由 [ ] 輸入自選值
+```js
+	<div className='[color:red]'>111</div>
+```
+↑ 由 [ ] 輸入原生css
+```js
+	<button className='[border:5px_solid_black]'>111</button>
+```
+↑ 以 "_" 下滑線代替空格
+

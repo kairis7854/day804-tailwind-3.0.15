@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .content-auto {
+        color: red;
+    }
+}
+@layer components {
+	.myComponents{ @apply
+		bg-green-500
+	}
+}
