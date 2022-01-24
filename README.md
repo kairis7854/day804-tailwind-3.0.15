@@ -87,7 +87,7 @@ VSCode 建議安裝官方插件 Tailwind CSS IntelliSense
 ## 常用狀態
 偽類， :hover, :focus,:first-child和:required\
 偽元素， ::before, ::after, ::placeholder, 和::selection\
-媒體查詢，例如響應式斷點、暗模式和prefers-reduced-motion\
+媒體查詢，例如響應式斷點、夜間模式和prefers-reduced-motion\
 屬性選擇器，例如[dir="rtl"]和[open]
 ## 偽類
 ```js
@@ -260,7 +260,7 @@ VSCode 建議安裝官方插件 Tailwind CSS IntelliSense
   <!-- ... -->
 </div>
 ```
-↑ 響應樣式。更多請參考：2.[響應設計](##響應設計)
+↑ 響應樣式。更多請參考：2.[響應設計](#響應設計)
 ```js
 <div class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
   <div>
@@ -274,7 +274,7 @@ VSCode 建議安裝官方插件 Tailwind CSS IntelliSense
   </p>
 </div>
 ```
-↑ 夜間模式。請參考：3.[夜間模式](##夜間模式)
+↑ 夜間模式。請參考：3.[夜間模式](#夜間模式)
 ```js
 <div>
   <div class="portrait:hidden">
