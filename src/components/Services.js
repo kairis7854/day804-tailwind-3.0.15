@@ -15,7 +15,7 @@ function Services() {
                 </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eligendi ratione quisquam.</p>
             </div>
-            <div className=' justify-center mt-[40px] grid grid-cols-3 gap-[20px] my-[40px]'>
+            <div className='gridContent'>
                 <div className='serviceBox'>
                     <img className='w-[50px]' src={icon1} alt="icon1" />
                     <h2 className='serviceBoxH2'>Web Design</h2>

@@ -96,6 +96,8 @@
         overflow-x: hidden;
     }
     h2 { font-size: 1.5em; margin: .75em 0 }
+    h3 { font-size: 1.17em; margin: .83em 0 }
+    h4 { margin: 1.12em 0 }
 }
 
 @layer components {
@@ -121,10 +123,56 @@
     .content{
         @apply flex justify-center mt-[40px]
     }
+    .gridContent{
+        @apply grid grid-cols-3 gap-[20px] my-[40px]
+    }
+    /* Services */
     .serviceBox{
         @apply border border-solid border-[rgba(0,0,0,.05)] py-[50px] px-[20px] flex bg-white justify-center items-center flex-col
-   }
-   .serviceBoxH2{
+    }
+    .serviceBoxH2{
         @apply text-[1.1em] mt-[20px] mb-[10px] font-semibold text-black text-center tracking-[2px] uppercase
-   }
+    }
+    /* Project */
+    .workBox{ 
+        @apply relative w-full h-[300px] overflow-hidden
+    }
+    .imgBx{
+        @apply relative w-full h-full translate-y-0 duration-500 ease-in-out group-hover:translate-y-[-100%]
+    }
+    .projectImg{
+        @apply absolute top-0 left-0 w-full h-full object-cover
+    }
+    .textBx{
+        @apply absolute top-0 left-0 w-full h-full bg-black flex justify-center items-center translate-y-[100%] duration-500 ease-in-out group-hover:translate-y-0
+    }
+    .projectH3{
+        @apply  text-white text-[1em]
+    }
+    /* testimonials */
+    .testimonialsBox{
+        @apply bg-white border border-solid border-[rgba(0,0,0,.05)] shadow-[0_5px_15px_rgba(0,0,0,.05)] p-[20px]
+    }
+    .testimonialsImgBox{
+        @apply relative w-[80px] h-[80px] mb-[10px]
+    }
+    .testimonialsImg{
+        @apply absolute top-0 left-0 w-full h-full object-cover
+    }
+    .testimonialsBoxH4{
+        @apply text-right mt-[20px] uppercase tracking-[2px] text-[1em] text-black leading-[1.2em] font-[600] pr-[10px]
+    }
+    .testimonialsBoxSpan{
+        @apply normal-case text-[#aaa] tracking-[1px] font-[300] text-[.7em]
+    }
+    /* contact */
+    .row{
+        @apply w-full grid grid-cols-2 gap-[20px] mt-[20px]
+    }
+    .row2{
+        @apply w-full flex justify-center items-center mt-[20px]
+    }
+    .contactInput{
+        @apply w-full p-[10px] outline-0 text-black bg-white text-[16px] border border-solid border-[rgba(0,0,0,.1)]
+    }
 }

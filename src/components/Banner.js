@@ -4,7 +4,7 @@ import user from '../assets/image/user.jpg'
 
 function Banner() {
     return (
-        <div className='relative min-h-screen flex justify-center items-center px-[20px]' id='banner'>
+        <div id='home' className='relative min-h-screen flex justify-center items-center px-[20px]' >
             <div className='flex flex-col justify-center items-center '>
                 <div className='relative w-[300px] h-[300px] overflow-hidden rounded-[50%] mb-[20px]'>
                     <img src={user} alt="user" className='absolute top-0 left-0 w-full h-full object-cover' />
