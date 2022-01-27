@@ -105,6 +105,8 @@
 }
 
 @layer utilities {
+
+    
     .navigationLi {
         @apply relative w-full my-[10px] whitespace-normal flex uppercase text-black font-medium tracking-[2px] opacity-50 cursor-pointer 
         hover:opacity-100
@@ -124,7 +126,7 @@
         @apply flex justify-center mt-[40px]
     }
     .gridContent{
-        @apply grid grid-cols-3 gap-[20px] my-[40px]
+        @apply grid grid-cols-3 gap-[20px] my-[40px] lg:grid-cols-2 md:grid-cols-1
     }
     /* Services */
     .serviceBox{
@@ -167,10 +169,10 @@
     }
     /* contact */
     .row{
-        @apply w-full grid grid-cols-2 gap-[20px] mt-[20px]
+        @apply w-full grid grid-cols-2 gap-[20px] mt-[20px] md:grid-cols-1
     }
     .row2{
-        @apply w-full flex justify-center items-center mt-[20px]
+        @apply w-full flex justify-center items-center mt-[20px] md:grid-cols-1
     }
     .contactInput{
         @apply w-full p-[10px] outline-0 text-black bg-white text-[16px] border border-solid border-[rgba(0,0,0,.1)]

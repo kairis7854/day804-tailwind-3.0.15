@@ -8,7 +8,7 @@ import icon6 from '../assets/image/icon6.png'
 
 function Services() {
     return (
-        <div id='services' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black'>
+        <div id='services' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black lg:px-[20px] lg:pt-[80px]'>
             <div className='title'>
                 <h2 className='my-[.75em] relative uppercase tracking-[2px] text-[1.2em] mb-[30px] flex justify-center'>
                     <p style={{ borderBottom: '2px solid #777', width: 'max-content' }}>Our Services</p>

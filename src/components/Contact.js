@@ -3,7 +3,7 @@ import React from 'react';
 function Contact() {
 
     return (
-        <div id='contact' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black flex justify-center items-center flex-col'>
+        <div id='contact' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black flex justify-center items-center flex-col lg:px-[20px] lg:pt-[80px] lg:mb-[100px]'>
             <div className='title'>
                 <h2 className='my-[.75em] relative uppercase tracking-[2px] text-[1.2em] mb-[30px] flex justify-center'>
                     <p style={{ borderBottom: '2px solid #777', width: 'max-content' }}>Let's Say Hi</p>

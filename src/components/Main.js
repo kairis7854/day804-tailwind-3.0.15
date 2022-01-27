@@ -12,7 +12,7 @@ import classNames from '../utils/classNames';
 function Main({ toggleState, setToggleState }) {
 
     return (
-        <div className={classNames(toggleState ? 'w-[calc(100%_-_300px)] left-[300px] lg:left-[100%]' : 'w-full left-0  lg:left-0', 'absolute bg-white min-h-screen transition-all duration-500 lg:w-full')}>
+        <div className={classNames(toggleState ? 'w-[calc(100%_-_300px)] left-[300px] lg:left-[100%]' : 'w-full left-0  lg:left-0', 'absolute bg-white min-h-screen transition-all duration-500 lg:w-full dark:bg-[#333]')}>
             <Topbar toggleState={toggleState} setToggleState={setToggleState} />
             <Banner />
             <About />
