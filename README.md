@@ -1,9 +1,9 @@
 # Tailwind 3.0.15
 
 ## DEMO
-連結：
-
-
+連結：https://kairis7854.github.io/day804-tailwind-3.0.15/
+![image](Readme.png)
+<br>
 
 ## 筆記：Tailwind 3.0.15
 
@@ -25,11 +25,15 @@
 &nbsp; &nbsp; &nbsp; [媒體查詢](#媒體查詢)\
 &nbsp; &nbsp; &nbsp; [主題](#主題)
 
-
 2.[響應設計](#響應設計)\
 3.[夜間模式](#夜間模式)\
 4.[主題樣式](#主題樣式)\
 5.[自訂義主題](#自訂義主題)
+
+參考\
+[react搭配tailwind](#react聲明式搭配tailwind)\
+[Icons for Tailwind CSS](#Icons-for-Tailwind-CSS)
+
 
 
 ## 入門
@@ -504,3 +508,34 @@ module.exports = {
 ```
 ↑ 以 "_" 下滑線代替空格
 
+## 參考
+## react聲明式搭配tailwind
+聲明式中的狀態搭配 tailwind 方法
+```js
+//classNames.js
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
+export default classNames
+
+//my components
+import classNames from '../utils/classNames';
+
+function Topbar({ toggleState, setToggleState }) {
+
+    return (
+        <div className={classNames(toggleState? 'bg-white' : 'bg-red-500',
+        'px-[10px] py-[5px] ')}>
+              {/* ... */}
+        </div>
+    )
+}
+
+export default Topbar;
+```
+參考 https://tailwindcss.com/blog/tailwind-ui-now-with-react-and-vue-support
+
+## Icons-for-Tailwind-CSS
+Tailwind Toolbox 裡的 Icon\
+參考 https://www.tailwindtoolbox.com/icons

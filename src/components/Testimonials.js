@@ -3,7 +3,7 @@ import user1 from '../assets/image/user1.jpg'
 import user2 from '../assets/image/user2.jpg'
 import user3 from '../assets/image/user3.jpg'
 
-function Testimonials({dark}) {
+function Testimonials() {
 
     return (
         <div id='testimonials' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-gray lg:px-[20px] lg:pt-[80px] dark:bg-black dark:text-white'>
