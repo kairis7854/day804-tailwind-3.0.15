@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/kairis7854/day804-tailwind-3.0.15/static/css/main.c960e759.css",
+    "main.js": "/kairis7854/day804-tailwind-3.0.15/static/js/main.31fa26a0.js",
+    "static/js/787.a7b9e48b.chunk.js": "/kairis7854/day804-tailwind-3.0.15/static/js/787.a7b9e48b.chunk.js",
+    "static/media/bg1.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/bg1.6d5cfca17207d6cf4a4f.jpg",
+    "static/media/img9.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img9.ece1082c7897cec7d897.jpg",
+    "static/media/img5.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img5.b0ebbe68592860cea192.jpg",
+    "static/media/img3.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img3.22063c3be5b01ea627ed.jpg",
+    "static/media/img7.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img7.9212947a354976a51a10.jpg",
+    "static/media/img6.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img6.dee4dc81aa8c39bf48d2.jpg",
+    "static/media/img8.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img8.5219c6e3b47896b5acef.jpg",
+    "static/media/img2.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img2.96ea36edda632f07fe74.jpg",
+    "static/media/img4.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img4.a25678fc88fc4c404ca9.jpg",
+    "static/media/img1.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/img1.367ba39b7ed9bc2e243d.jpg",
+    "static/media/user.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/user.e94fa6bf4eb3b69d0ac8.jpg",
+    "static/media/user2.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/user2.db8e2e344615a9a666b2.jpg",
+    "static/media/user1.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/user1.7925790438a4dc07c3ae.jpg",
+    "static/media/user3.jpg": "/kairis7854/day804-tailwind-3.0.15/static/media/user3.60cac3ffc64c0c3b76ba.jpg",
+    "index.html": "/kairis7854/day804-tailwind-3.0.15/index.html",
+    "main.c960e759.css.map": "/kairis7854/day804-tailwind-3.0.15/static/css/main.c960e759.css.map",
+    "main.31fa26a0.js.map": "/kairis7854/day804-tailwind-3.0.15/static/js/main.31fa26a0.js.map",
+    "787.a7b9e48b.chunk.js.map": "/kairis7854/day804-tailwind-3.0.15/static/js/787.a7b9e48b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c960e759.css",
+    "static/js/main.31fa26a0.js"
+  ]
+}
