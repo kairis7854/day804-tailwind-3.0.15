@@ -106,14 +106,12 @@
 
 @layer utilities {
 
-    
     .navigationLi {
-        @apply relative w-full my-[10px] whitespace-normal flex uppercase text-black font-medium tracking-[2px] opacity-50 cursor-pointer 
-        hover:opacity-100
+        @apply relative w-full my-[10px] whitespace-normal flex uppercase text-black font-medium tracking-[2px] opacity-50 cursor-pointer hover:opacity-100 dark:text-white
     }
     
     .bannerLi{
-        @apply w-[40px] h-[40px] bg-[rgba(0,0,0,.05)] m-[5px] flex justify-center items-center text-black text-[1.2em] hover:text-white hover:bg-black
+        @apply w-[40px] h-[40px] bg-white m-[5px] flex justify-center items-center text-black text-[1.2em] hover:text-white hover:bg-black dark:bg-[#222] dark:text-white dark:hover:bg-[#2196f3]
     }
 
     .section{
@@ -130,10 +128,10 @@
     }
     /* Services */
     .serviceBox{
-        @apply border border-solid border-[rgba(0,0,0,.05)] py-[50px] px-[20px] flex bg-white justify-center items-center flex-col
+        @apply border border-solid border-[rgba(0,0,0,.05)] py-[50px] px-[20px] flex bg-white justify-center items-center flex-col dark:bg-gray dark:hover:bg-[#2196f3]
     }
     .serviceBoxH2{
-        @apply text-[1.1em] mt-[20px] mb-[10px] font-semibold text-black text-center tracking-[2px] uppercase
+        @apply text-[1.1em] mt-[20px] mb-[10px] font-semibold text-black text-center tracking-[2px] uppercase dark:text-white
     }
     /* Project */
     .workBox{ 
@@ -146,26 +144,26 @@
         @apply absolute top-0 left-0 w-full h-full object-cover
     }
     .textBx{
-        @apply absolute top-0 left-0 w-full h-full bg-black flex justify-center items-center translate-y-[100%] duration-500 ease-in-out group-hover:translate-y-0
+        @apply absolute top-0 left-0 w-full h-full bg-black flex justify-center items-center translate-y-[100%] duration-500 ease-in-out group-hover:translate-y-0 dark:bg-gray
     }
     .projectH3{
         @apply  text-white text-[1em]
     }
     /* testimonials */
     .testimonialsBox{
-        @apply bg-white border border-solid border-[rgba(0,0,0,.05)] shadow-[0_5px_15px_rgba(0,0,0,.05)] p-[20px]
+        @apply bg-white border border-solid border-[rgba(0,0,0,.05)] shadow-[0_5px_15px_rgba(0,0,0,.05)] p-[20px] dark:bg-gray  dark:hover:bg-[#2196f3]
     }
     .testimonialsImgBox{
-        @apply relative w-[80px] h-[80px] mb-[10px]
+        @apply relative w-[80px] h-[80px] mb-[10px] 
     }
     .testimonialsImg{
         @apply absolute top-0 left-0 w-full h-full object-cover
     }
     .testimonialsBoxH4{
-        @apply text-right mt-[20px] uppercase tracking-[2px] text-[1em] text-black leading-[1.2em] font-[600] pr-[10px]
+        @apply text-right mt-[20px] uppercase tracking-[2px] text-[1em] text-black leading-[1.2em] font-[600] pr-[10px] dark:text-white [borderRight:4px_solid_#777] dark:[borderRight:4px_solid_white]
     }
     .testimonialsBoxSpan{
-        @apply normal-case text-[#aaa] tracking-[1px] font-[300] text-[.7em]
+        @apply normal-case tracking-[1px] font-[300] text-[.7em] dark:text-white
     }
     /* contact */
     .row{
@@ -175,6 +173,6 @@
         @apply w-full flex justify-center items-center mt-[20px] md:grid-cols-1
     }
     .contactInput{
-        @apply w-full p-[10px] outline-0 text-black bg-white text-[16px] border border-solid border-[rgba(0,0,0,.1)]
+        @apply w-full p-[10px] outline-0 text-black bg-white text-[16px] border border-solid border-[rgba(0,0,0,.1)] dark:bg-gray  dark:text-white
     }
 }

@@ -18,7 +18,7 @@ function Main({ toggleState, setToggleState }) {
             <About />
             <Services />
             <Project />
-            <Testimonials />
+            <Testimonials  />
             <Contact />
             <Copyright />
         </div>

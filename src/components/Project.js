@@ -11,9 +11,9 @@ import img9 from '../assets/image/img9.jpg'
 
 function Project() {
     return (
-        <div id='project' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black lg:px-[20px] lg:pt-[80px]'>
+        <div id='project' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black lg:px-[20px] lg:pt-[80px] dark:bg-black dark:text-grayLight'>
             <div className='title'>
-                <h2 className='my-[.75em] relative uppercase tracking-[2px] text-[1.2em] mb-[30px] flex justify-center'>
+                <h2 className='my-[.75em] relative uppercase tracking-[2px] text-[1.2em] mb-[30px] flex justify-center dark:text-white'>
                     <p style={{ borderBottom: '2px solid #777', width: 'max-content' }}>Recent Work</p>
                 </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eligendi ratione quisquam.</p>

@@ -4,14 +4,14 @@ import bg1 from '../assets/image/bg1.jpg'
 function About() {
 
     return (
-        <div id='about' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black lg:px-[20px] lg:pt-[80px] '>
+        <div id='about' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black  lg:px-[20px] lg:pt-[80px] dark:bg-black dark:text-white'>
             <div className='title'>
                 <h2 className='my-[.75em] relative uppercase tracking-[2px] text-[1.2em] mb-[30px] flex justify-center'>   
                     <p style={{borderBottom:'2px solid #777',width:'max-content'}}>About Me</p>
                 </h2>
             </div>
             <div className='content lg:flex-col'>
-                <div className='w-[49%] min-w-[49%] lg:w-full lg:min-w-full '>
+                <div className='w-[49%] min-w-[49%] lg:w-full lg:min-w-full'>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eligendi ratione quisquam. Ut
                         officia perferendis nesciunt laudantium nisi voluptatibus repudiandae praesentium architecto.
                         Recusandae odio iste ipsum consequatur aliquid obcaecati, quam necessitatibus quos laboriosam

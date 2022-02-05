@@ -3,9 +3,9 @@ import React from 'react';
 function Contact() {
 
     return (
-        <div id='contact' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black flex justify-center items-center flex-col lg:px-[20px] lg:pt-[80px] lg:mb-[100px]'>
+        <div id='contact' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black flex justify-center items-center flex-col lg:px-[20px] lg:pt-[80px] lg:mb-[100px] dark:bg-black dark:text-white'>
             <div className='title'>
-                <h2 className='my-[.75em] relative uppercase tracking-[2px] text-[1.2em] mb-[30px] flex justify-center'>
+                <h2 className='my-[.75em] relative uppercase tracking-[2px] text-[1.2em] mb-[30px] flex justify-center '>
                     <p style={{ borderBottom: '2px solid #777', width: 'max-content' }}>Let's Say Hi</p>
                 </h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eligendi ratione quisquam.</p>
@@ -23,7 +23,7 @@ function Contact() {
                     <textarea className='contactInput h-full resize-none' type="text" placeholder='Message' />
                 </div>
                 <div className="row2">
-                    <input className='bg-black text-white py-[10px] px-[30px] font-[500] tracking-[2px] cursor-pointer text-[16px] uppercase max-w-[150px] border-none ' type="submit" value='Send' />
+                    <input className='bg-black text-white py-[10px] px-[30px] font-[500] tracking-[2px] cursor-pointer text-[16px] uppercase max-w-[150px] border-none dark:bg-[#2196f3]' type="submit" value='Send' />
                 </div>
             </div>
         </div>
