@@ -10,6 +10,21 @@ import img8 from '../assets/image/img8.jpg'
 import img9 from '../assets/image/img9.jpg'
 
 function Project() {
+
+    const imgArr = [img1,img2,img3,img4,img5,img6,img7,img8,img9]
+    const projectArr = imgArr.map((item, index) => {
+        return (
+            <div className="workBox group" key={index}>
+                <div className="imgBx">
+                    <img className='projectImg' src={item} alt="" />
+                </div>
+                <div className="textBx">
+                    <h3 className='projectH3'>Project 0{index+1}</h3>
+                </div>
+            </div>
+        )
+    })
+
     return (
         <div id='project' className='relative min-h-screen px-[40px] pt-[80px] bg-white text-black lg:px-[20px] lg:pt-[80px] dark:bg-black dark:text-grayLight'>
             <div className='title'>
@@ -19,78 +34,7 @@ function Project() {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eligendi ratione quisquam.</p>
             </div>
             <div className='gridContent'>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img1} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 01</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img2} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 02</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img3} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 03</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img4} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 04</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img5} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 05</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img6} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 06</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img7} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 07</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img8} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 08</h3>
-                    </div>
-                </div>
-                <div className="workBox group">
-                    <div className="imgBx">
-                        <img className='projectImg' src={img9} alt="" />
-                    </div>
-                    <div className="textBx">
-                        <h3 className='projectH3'>Project 09</h3>
-                    </div>
-                </div>
+                {projectArr}
             </div>
         </div>
     )
